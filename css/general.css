@@ -1,0 +1,61 @@
+body{
+     font-family: 'Roboto';
+     font-display: block;
+}
+html{
+	scroll-behavior: smooth;
+}
+a, a:hover{
+     text-decoration: none;
+}
+:focus {
+     outline: 0;
+}
+
+.loader-bg{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	height: 100vh;
+	background: #eeeeee;
+	background: linear-gradient(139deg, #eeeeee 0%, #fff 100%);
+	background: -webkit-linear-gradient(139deg, #eeeeee 0%, #fff 100%);
+	background: -moz-linear-gradient(139deg, #eeeeee 0%, #fff 100%);
+	z-index: 2000;
+}
+.loader{
+	width: 250px;
+	height: 250px;
+	max-width: 70vw;
+	max-height: 70vw;
+	border: 30px solid transparent;
+	border-top-color: #0000ff;
+	border-bottom-color: #00c592;
+	border-radius: 50%;
+	animation: loader 1.5s infinite;
+	box-shadow: 0px 10px 100px 0px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0px 10px 100px 0px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0px 10px 100px 0px rgba(0,0,0,0.2);
+}
+.loader-bg h4{
+	animation: loaderText 1s infinite;
+}
+@keyframes loader{
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(720deg);
+	}
+}
+@keyframes loaderText{
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
