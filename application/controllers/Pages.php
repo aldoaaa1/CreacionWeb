@@ -26,12 +26,17 @@
 			$data['keywords'] = $GLOBALS['keywords'][$page];
 			$this->load->view('template/header', $data);
 			$this->load->view($page);
-			$this->load->view('template/Close');
+			$this->load->view('template/close');
 		}
 		function nueva_visita(){
 			$this->load->model('Enviar_estadisticas');
 			$this->Enviar_estadisticas->registrar_visita();
 			$this->Enviar_estadisticas->registrar_frecuencia();
+			$this->Enviar_estadisticas->registrar_reporte_mensual();
+		}
+		function reporte_manual($date1){
+			$this->load->model('Enviar_estadisticas');
+			$this->Enviar_estadisticas->reporte_manual($date1);
 		}
 	}
 ?>
