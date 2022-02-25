@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>css/general.css?5">
 	<?php
 		if (file_exists('css/'.$page.'.css')) {
-			echo '<link rel="stylesheet" type="text/css" href="/css/'.$page.'.css">';
+			echo '<link rel="stylesheet" type="text/css" href="'.base_url().'css/'.$page.'.css">';
 		}
 	?>
 	<script> var base_url = "<?=base_url()?>" </script>

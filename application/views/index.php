@@ -19,7 +19,7 @@
 		</div>
 		<p class="onScroll" data-type="show" data-delay="700"><i class="bi bi-telephone-fill"></i> 8119776885</p>
 	</div>
-	<img class="img-lg" src="/img/responsive1.png" alt="Responsive Design">
+	<img class="img-lg" src="<?=base_url();?>img/responsive1.png" alt="Responsive Design">
 	
 </header>
 <section id="conquista" class="card-left">
