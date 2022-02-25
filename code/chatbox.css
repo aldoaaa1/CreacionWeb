@@ -1,0 +1,230 @@
+.chatbox-mensaje_left:before {
+    border-top-color: var(--chatbox_message_color) !important;
+}
+.chatbox-mensaje_right:before{
+    border-top-color: var(--client_message_color) !important;
+}
+.chatbox-mensaje_left{
+    background-color: var(--chatbox_message_color) !important;
+}
+.chatbox-mensaje_right{
+    background-color: var(--client_message_color) !important;
+}
+.chatbox-headerCircle, .chatbox-footer, .chatbox-body{
+    background-color: var(--chatbox_body_color);
+}
+.chatboxIcono{
+	position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 80px;
+    cursor: pointer;
+    z-index: 1000
+}
+
+#chatbox{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	max-height: 100%;
+	width: 250px;
+	max-width: 100%;
+	border-radius: 35px 0 0 0;
+	transition: all ease .3s;
+	overflow: hidden;
+	font-family: helvetica, sans-serif;
+	box-shadow: 0px 0px 20px 1px rgba(0 0 0 / 10%);
+	-webkit-box-shadow: 0px 0px 20px 1px rgba(0 0 0 / 10%);
+	-moz-box-shadow: 0px 0px 20px 1px rgba(0 0 0 / 10%);
+    z-index: 1001
+}
+.chatboxClose{
+	bottom: -600px !important;
+}
+#chatbox p, #chatboxCloseBtn {
+	font-size: 13px;
+	margin: 0;
+}
+.chatbox-body span{
+	display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #9e9e9e;
+    font-size: 11px;
+}
+.chatboxHide{
+	transform: translateY(100%);
+}
+.chatbox-header{
+	background-color: #d0cfcf;
+	height: 110px;
+}
+#chatboxCloseBtn{
+	position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    font-size: 15px;
+    color: #eee;
+    cursor: pointer;
+    transition: all ease .2s;
+}
+#chatboxCloseBtn:hover{
+	transform: scale(1.3);
+    color: #fff;
+}
+.chatbox-top{
+	position: absolute;
+	top: 12px;
+    left: 45px;
+}
+.chatbox-top img{
+	width: 50px;
+	border-radius: 50%
+}
+.chatbox-top h2, .chatbox-top p, .chatbox-top span{
+	margin: 0;
+}
+.chatbox-top h2, .chatbox-top p{
+	color: #545454;
+}
+.chatbox-top h2{
+	font-size: 18px;
+}
+.chatbox-top span{
+	position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+}
+.chatbox-headerCircle{
+	position: absolute;
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    top: -270px;
+    right: -190px;
+}
+.chatbox-mensaje_left, .chatbox-mensaje_right{
+	align-items: center;
+	position: relative;
+	max-width: 170px;
+	min-width: 56px;
+	border-radius: 10px;
+    padding: 5px 10px;
+    margin: 10px 30px 0;
+    color: #797979;
+    box-shadow: 0 0 11px 0 rgb(0 0 0 / 5%);
+    transition: all ease 0.2s;
+}
+.chatbox-mensaje_left{
+	float: left;
+	transform: translateX(-300px);
+    opacity: 0;
+    text-align: left;
+}
+.chatbox-mensaje_right{
+	float: right;
+	transform: translateX(300px);
+    opacity: 0;
+    text-align: right;
+}
+.chatbox-mensaje_show{
+	transform: translateX(0) !important;
+    opacity: 1 !important;
+}
+.chatbox-mensaje_left:before, .chatbox-mensaje_right:before{
+  	content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 0px;
+    height: 0px;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+}
+.chatbox-mensaje_left:before{
+	left: -15px;
+	border-top: 20px solid;
+	border-right: 10px solid transparent;
+	transform: rotate(335deg);
+}
+.chatbox-mensaje_right:before{
+    right: -15px;
+    border-top: 20px solid;
+    border-left: 10px solid transparent;
+    transform: rotate(25deg);
+}
+.chatbox-body{
+    max-height: 280px;
+    min-height: 100px;
+    overflow-x: hidden;
+  	overflow-y: auto;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+}
+.chatbox-body::-webkit-scrollbar, .chatbox-send textarea::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+.chatbox-body::-webkit-scrollbar-thumb, .chatbox-send textarea::-webkit-scrollbar-thumb {
+    background: #8a8a8a;
+    border-radius: 4px;
+}
+.chatbox-body::-webkit-scrollbar-thumb:hover, .chatbox-send textarea::-webkit-scrollbar-thumb:hover {
+    background: #666;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.chatbox-body::-webkit-scrollbar-thumb:active, .chatbox-send textarea::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+}
+.chatbox-footer{
+	height: 25px;
+    text-align: center;
+    font-size: 13px;
+    position: relative;
+}
+.chatbox-footer a{
+	text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    color: #666;
+}
+.chatbox-send{
+	height: 70px;
+}
+.chatbox-send textarea{
+	float: left;
+    width: 70%;
+    box-sizing: border-box;
+    height: 100%;
+    border: none;
+    overflow: auto;
+    font-family: helvetica, sans-serif;
+    padding: 5px 10px;
+    resize: none;
+    font-size: 14px;
+    background-color: white;
+    color: #777;
+}
+.chatbox-send textarea::placeholder{
+    color: #777;
+}
+.chatbox-send textarea:focus{
+	outline: none;
+}
+.chatbox-sendButton{
+	float: right;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    padding: 10% 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: #61798a;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 12px;
+}

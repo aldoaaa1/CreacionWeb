@@ -50,6 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'pages/index';
+$route['como-crear-una-pagina-web'] = 'pages/view/desarrollo';
+$route['como-crear-una-landing-page'] = 'pages/view/landing';
+$route['como-crear-una-pagina-web-gratis'] = 'pages/view/pagina_gratis';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['rgv'] = 'pages/nueva_visita';

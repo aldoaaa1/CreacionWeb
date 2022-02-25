@@ -1,0 +1,63 @@
+#landing_page1 > div.onScroll.row{
+	background-color: #f4fde0;
+	padding: 35px;
+}
+#card-a > h2{
+	text-align: right;
+	margin: 0;
+	border-right: solid 2px #666;
+	padding-right: 30px;
+}
+#card-a > p{
+	padding-left: 30px;
+}
+.card1{
+	text-align: center;
+	margin: 100px 0;
+}
+.card_item{
+	flex-direction: column;
+}
+.card_item img{
+	width: 800px;
+    height: 450px;
+    max-width: 90%;
+    max-height: 60vw;
+    object-fit: cover;
+}
+.card_item p{
+	width: 600px;
+	max-width: 90%;
+	margin: 20px auto;
+}
+#landing_gratis{
+	text-align: center;
+	background-color: #ffeac3;
+    padding: 35px 50px;
+    margin-top: 50px;
+    border-radius: 35px 0;
+}
+#landing_gratis > h3{
+	margin: 0 auto 20px;
+}
+#landing_gratis > div > img{
+	object-fit: cover;
+    height: 200px;
+    max-width: 90%;
+}
+
+
+@media (max-width: 994px){
+	#card-a > h2{
+		border: none;
+		padding: 0;
+		text-align: center;
+	}
+	#card-a > p{
+		padding: 0 50px;
+		text-align: center;
+	}
+	#landing_gratis > div > img{
+		float: none;
+	}
+}

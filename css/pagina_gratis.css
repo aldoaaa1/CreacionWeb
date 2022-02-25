@@ -1,0 +1,40 @@
+#free_container > div.onScroll.row{
+	background-color: #fdf3e0;
+	padding: 35px;
+}
+#card-a > h3{
+	text-align: right;
+	margin: 23px 0;
+	border-right: solid 2px #666;
+	padding-right: 30px;
+}
+#card-a > p{
+	padding-left: 30px;
+}
+.card1{
+	text-align: center;
+	margin-top: 150px;
+}
+.card_item img{
+	width: 1000px; height: 500px;
+	max-width: 90%; max-height: 60vw;
+	object-fit: cover;
+}
+.card_item p{
+	width: 800px;
+	max-width: 90%;
+	margin: 20px auto;
+}
+
+
+@media (max-width: 994px){
+	#card-a > h3{
+		border: none;
+		padding: 0;
+		text-align: center;
+	}
+	#card-a > p{
+		padding: 0;
+		text-align: center;
+	}
+}
